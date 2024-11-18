@@ -6,7 +6,7 @@ const Parcel = require("../models/Parcel");
 dotenv.config();
 
 const SendParcelPendingEmail = async() =>{
-    const parcels = await Parcel.find({status:0});
+    const parcels = await Parcel.find({status:2});
 
     if(parcels.length > 0){
         for(let parcel of parcels){
